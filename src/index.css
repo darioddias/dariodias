@@ -4,12 +4,50 @@ body {
     background-color: black;
     color: #1DB954;
   }
+
+  /* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+      font-size: 3rem; /* Adjust text size for mobile */
+      text-align: center;
+    }
   
+    h2 {
+      font-size: 2rem;
+    }
+  
+    nav {
+  padding: 10px 5%; /* Adds space on mobile */
+}
+
+button {
+  font-size: 16px; /* Default font size */
+}
+
+@media (max-width: 768px) {
+  button {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  nav {
+    gap: 8px; /* Adjust spacing between items for mobile */
+  }
+}
+
+  
+    section {
+      padding: 10px;
+    }
+  }
+  
+
   a, h1, h2, h3, h4, h5, h6, p, span, div {
     color: #1DB954;
+    text-decoration: none;
   }
   
   a:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, p:hover, span:hover, div:hover {
-    color: #1ED760;
+    color: inherit; 
+    cursor: default;
   }
   

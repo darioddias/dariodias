@@ -32,7 +32,7 @@ const App = () => {
       </section>
       <section id="experience" style={{ minHeight: '100vh', padding: '50px', textAlign: 'center' }}>
         <h2>Experience</h2>
-        <p>Describe your professional journey.</p>
+        <p>Here's my experience!</p>
       </section>
       <section id="projects" style={{ minHeight: '100vh', padding: '50px', textAlign: 'center' }}>
         <h2>Projects</h2>

@@ -47,7 +47,7 @@ section#about p b {
 
 /* Navbar Styles */
 header nav {
-  padding: 10px 5%; /* Adjust padding */
+  padding: 10px 5%;
 }
 
 header nav button {
@@ -60,7 +60,7 @@ header nav button {
 }
 
 header nav button:hover {
-  color: white; /* Highlight on hover */
+  color: white;
 }
 
 /* Typing Animation Styles */
@@ -69,7 +69,12 @@ header nav button:hover {
   border-right: 3px solid white; /* Cursor effect */
   white-space: nowrap;
   overflow: hidden;
+  animation: none; /* Default state: no animation */
+}
+
+.typing.animate {
   animation: typing 3s steps(20, end), blink 0.6s step-end infinite;
+  animation-fill-mode: forwards; /* Ensure the animation persists */
 }
 
 @keyframes typing {
@@ -91,28 +96,28 @@ header nav button:hover {
 @media (max-width: 768px) {
   /* Section Titles */
   section h2 {
-    font-size: 2.5rem; /*  title size for mobile */
+    font-size: 2.5rem;
   }
 
   /* Navbar */
   header nav {
-    gap: 8px; /*  spacing for smaller screens */
+    gap: 8px;
   }
 
   header nav button {
-    font-size: 16px; /* Smaller font for mobile */
+    font-size: 16px;
   }
 
   /* About Section */
   section#about p {
-    font-size: 1.2rem; /* Slightly smaller paragraph */
+    font-size: 1.2rem;
     line-height: 1.6;
-    max-width: 90%; /* Allow more width on smaller screens */
+    max-width: 90%;
   }
 
   /* Typing Effect */
   .typing {
-    font-size: 2.5rem; /* typing text size */
+    font-size: 2.5rem;
   }
 
   /* General Section Padding */

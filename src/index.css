@@ -91,12 +91,12 @@ header nav button:hover {
 @media (max-width: 768px) {
   /* Section Titles */
   section h2 {
-    font-size: 2.5rem; /* Adjust title size for mobile */
+    font-size: 2.5rem; /*  title size for mobile */
   }
 
   /* Navbar */
   header nav {
-    gap: 8px; /* Adjust spacing for smaller screens */
+    gap: 8px; /*  spacing for smaller screens */
   }
 
   header nav button {
@@ -112,7 +112,7 @@ header nav button:hover {
 
   /* Typing Effect */
   .typing {
-    font-size: 2.5rem; /* Adjust typing text size */
+    font-size: 2.5rem; /* typing text size */
   }
 
   /* General Section Padding */

@@ -156,3 +156,18 @@ header .navbar-logo {
   font-weight: bold;
   color: #1DB954;
 }
+
+/* image effect */
+.about-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.about-image:hover {
+  transform: scale(1.05) rotate(1deg); /* Slight zoom and tilt */
+  filter: brightness(1.2); /* Brightens image */
+}

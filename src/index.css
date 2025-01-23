@@ -45,22 +45,15 @@ section#about p b {
   color: white; /* Highlight specific words */
 }
 
-/* Navbar Styles */
-header nav {
-  padding: 10px 5%;
+/* Navbar Links (Desktop) */
+.nav-links {
+  display: flex;
+  gap: 20px;
 }
 
-header nav button {
-  font-size: 20px; /* Larger navbar text */
-  font-weight: bold;
-  color: #1DB954;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-header nav button:hover {
-  color: white;
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none;
 }
 
 /* Typing Animation Styles */
@@ -96,16 +89,43 @@ header nav button:hover {
 @media (max-width: 768px) {
   /* Section Titles */
   section h2 {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Adjust title size for mobile */
   }
 
-  /* Navbar */
+  /* Navbar Styles */
   header nav {
-    gap: 8px;
+    gap: 8px; /* Adjust spacing for mobile */
   }
 
   header nav button {
-    font-size: 16px;
+    font-size: 16px; /* Smaller navbar text size */
+  }
+
+  /* Mobile Navbar */
+  .nav-links {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    flex-direction: column;
+    background-color: black;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    gap: 10px;
+  }
+
+  .nav-links.open {
+    display: flex; /* Show when menu is toggled open */
+  }
+
+  .hamburger-menu {
+    display: block; /* Visible on mobile */
+  }
+
+  .nav-links button {
+    font-size: 1.2rem;
+    padding: 10px;
+    text-align: left;
   }
 
   /* About Section */

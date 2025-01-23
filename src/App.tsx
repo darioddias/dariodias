@@ -26,10 +26,15 @@ const App = () => {
         </h1>
       </section>
       <section id="aboutme" style={{ minHeight: '100vh', padding: '50px', textAlign: 'center' }}>
-        <h2>About Me</h2>
-        <p>Howdy! My name is Dario Dias and I'm a <b style={{ color: "silver" }}>Dallas, TX</b> based computer science student at the <b style={{ color: "silver" }}>University of North Texas</b>. I love working with technology and I'm interested in <b style={{ color: "silver" }}>IT</b>. 
-        In my free time I love to listen to music, play video games and take pictures!</p>
+        <h2>
+          About <span className="highlight">Me</span>
+        </h2>
+        <p>
+          Howdy! My name is Dario Dias and I'm a <b style={{ color: "silver" }}>Dallas, TX</b> based computer science student at the <b style={{ color: "silver" }}>University of North Texas</b>. I love working with technology and I'm interested in <b style={{ color: "silver" }}>IT</b>. 
+          In my free time I love to listen to music, play video games and take pictures!
+        </p>
       </section>
+
       <section id="experience" style={{ minHeight: '100vh', padding: '50px', textAlign: 'center' }}>
         <h2>Experience</h2>
         <p>Here's my experience!</p>
@@ -38,9 +43,12 @@ const App = () => {
         <h2>Projects</h2>
         <p>Showcase your work.</p>
       </section>
+     
       <section id="contactme" style={{ minHeight: '100vh', padding: '50px', textAlign: 'center' }}>
-        <h2>Contact Me</h2>
-        <p>Provide your contact information.</p>
+        <h2>
+          Contact <span className="highlight">Me!</span>
+        </h2>
+        <p>You can contact me at dariokdias@gmail.com</p>
       </section>
       <Footer />
     </div>

@@ -50,4 +50,13 @@ button {
     color: inherit; 
     cursor: default;
   }
+
+  section h2 {
+    font-size: 3rem; 
+    color: #1DB954;
+  }
   
+  #aboutme h2 span.highlight,
+  #contactme h2 span.highlight {
+    color: white;
+  }

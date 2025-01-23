@@ -137,7 +137,29 @@ section#about p b {
 
   /* Typing Effect */
   .typing {
-    font-size: 2.5rem;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #1db954;
+    animation: typing 3s steps(30, end), blink 0.5s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    from {
+      border-color: transparent;
+    }
+    to {
+      border-color: #1db954;
+    }
   }
 
   /* General Section Padding */

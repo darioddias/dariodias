@@ -38,17 +38,22 @@ const App = () => {
           fontSize: '3rem',
         }}
       >
-        <h1 style={{ fontSize: '5rem' }}>
+        <h1 className="typing" style={{ fontSize: '5rem' }}>
           Hey, I'm <span style={{ color: 'white' }}>Dario</span>
         </h1>
       </section>
+
+      {/* About Me Section */}
       <section id="aboutme" style={{ minHeight: '100vh', padding: '50px', textAlign: 'center' }}>
-        <h2>About Me</h2>
+      <h2 className="typing">
+          <span style={{ color: 'white' }}>//</span> About{' '}
+          <span style={{ color: 'white' }}>Me</span>
+        </h2>
         <p>
           Howdy! My name is Dario Dias and I'm a{' '}
-          <b style={{ color: 'silver' }}>Dallas, TX</b> based computer science student at the{' '}
-          <b style={{ color: 'silver' }}>University of North Texas</b>. I love working with technology and
-          I'm interested in <b style={{ color: 'silver' }}>IT</b>. In my free time, I love to listen to
+          <b style={{ color: 'white' }}>Dallas, TX</b> based computer science student at the{' '}
+          <b style={{ color: 'white' }}>University of North Texas</b>. I love working with technology and
+          I'm interested in <b style={{ color: 'white' }}>IT</b>. In my free time, I love to listen to
           music, play video games, and take pictures!
         </p>
         <div

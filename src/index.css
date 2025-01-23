@@ -145,3 +145,14 @@ section#about p b {
     padding: 20px;
   }
 }
+
+/* styles for the header and logo */
+header {
+  border-bottom: 4px solid #1DB954; /* Green border */
+}
+
+header .navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1DB954;
+}

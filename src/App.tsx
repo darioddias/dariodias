@@ -52,14 +52,14 @@ const App = () => {
 
       {/* About Me Section */}
       <section
-        id="about"
+        id="aboutme"
         style={{
           minHeight: '100vh',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           flexDirection: 'column',
-          padding: '50px',
+          padding: '110px 50px 50px',
           textAlign: 'center',
         }}
       >

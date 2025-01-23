@@ -11,6 +11,14 @@ const Header = () => {
     }
   };
 
+  const sectionMappings: { [key: string]: string } = {
+    'Home': 'home',
+    'About Me': 'about', // Corrected to match App.tsx
+    'Experience': 'experience',
+    'Projects': 'projects',
+    'Contact Me': 'contactme',
+  };
+
   return (
     <header
       style={{
@@ -27,12 +35,12 @@ const Header = () => {
           justifyContent: 'center',
           gap: '10px',
           padding: '10px 5%',
-          flexWrap: 'nowrap', // Ensures the items don’t wrap
-          overflowX: 'auto', // Allows scrolling on smaller screens if needed
+          flexWrap: 'nowrap',
+          overflowX: 'auto',
         }}
       >
-        {['Home', 'About Me', 'Experience', 'Projects', 'Contact Me'].map((item) => {
-          const id = item.replace(/\s+/g, '').toLowerCase();
+        {Object.keys(sectionMappings).map((item) => {
+          const id = sectionMappings[item];
           return (
             <button
               key={id}
@@ -42,7 +50,7 @@ const Header = () => {
                 border: 'none',
                 color: activeSection === id ? 'white' : '#1DB954',
                 fontSize: '14px',
-                whiteSpace: 'nowrap', // Prevents text from breaking into multiple lines
+                whiteSpace: 'nowrap',
                 cursor: 'pointer',
                 transition: 'color 0.3s',
               }}

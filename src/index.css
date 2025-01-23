@@ -1,62 +1,122 @@
+/* Global Styles */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: black;
-    color: #1DB954;
-  }
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: #1DB954;
+}
 
-  /* Responsive Design */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section Title Styles */
+section h2 {
+  font-size: 3rem; /* Larger for desktop */
+  text-align: center;
+  color: #1DB954;
+}
+
+/* Highlight Specific Words */
+section#about h2 span.highlight,
+section#contactme h2 span.highlight {
+  color: white;
+}
+
+/* About Section */
+section#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  text-align: center;
+}
+
+section#about p {
+  max-width: 600px;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #1DB954; /* Default green */
+  margin-top: 20px;
+}
+
+section#about p b {
+  color: white; /* Highlight specific words */
+}
+
+/* Navbar Styles */
+header nav {
+  padding: 10px 5%; /* Adjust padding */
+}
+
+header nav button {
+  font-size: 20px; /* Larger navbar text */
+  font-weight: bold;
+  color: #1DB954;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+header nav button:hover {
+  color: white; /* Highlight on hover */
+}
+
+/* Typing Animation Styles */
+.typing {
+  display: inline-block;
+  border-right: 3px solid white; /* Cursor effect */
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(20, end), blink 0.6s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    h1 {
-      font-size: 3rem; /* Adjust text size for mobile */
-      text-align: center;
-    }
-  
-    h2 {
-      font-size: 2rem;
-    }
-  
-    nav {
-  padding: 10px 5%; /* Adds space on mobile */
-}
-
-button {
-  font-size: 16px; /* Default font size */
-}
-
-@media (max-width: 768px) {
-  button {
-    font-size: 14px; /* Smaller font size for mobile */
-  }
-
-  nav {
-    gap: 8px; /* Adjust spacing between items for mobile */
-  }
-}
-
-  
-    section {
-      padding: 10px;
-    }
-  }
-  
-
-  a, h1, h2, h3, h4, h5, h6, p, span, div {
-    color: #1DB954;
-    text-decoration: none;
-  }
-  
-  a:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, p:hover, span:hover, div:hover {
-    color: inherit; 
-    cursor: default;
-  }
-
+  /* Section Titles */
   section h2 {
-    font-size: 3rem; 
-    color: #1DB954;
+    font-size: 2.5rem; /* Adjust title size for mobile */
   }
-  
-  #aboutme h2 span.highlight,
-  #contactme h2 span.highlight {
-    color: white;
+
+  /* Navbar */
+  header nav {
+    gap: 8px; /* Adjust spacing for smaller screens */
   }
+
+  header nav button {
+    font-size: 16px; /* Smaller font for mobile */
+  }
+
+  /* About Section */
+  section#about p {
+    font-size: 1.2rem; /* Slightly smaller paragraph */
+    line-height: 1.6;
+    max-width: 90%; /* Allow more width on smaller screens */
+  }
+
+  /* Typing Effect */
+  .typing {
+    font-size: 2.5rem; /* Adjust typing text size */
+  }
+
+  /* General Section Padding */
+  section {
+    padding: 20px;
+  }
+}

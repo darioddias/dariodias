@@ -3,8 +3,8 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: black;
-  color: #1DB954;
-}
+    color: #1DB954;
+  }
 
 html {
   scroll-behavior: smooth;
@@ -34,11 +34,11 @@ section#about {
 }
 
 section#about p {
-  max-width: 600px;
-  font-size: 1.5rem;
-  line-height: 1.8;
-  color: #1DB954; /* Default green */
-  margin-top: 20px;
+  font-size: 1.8rem; 
+  line-height: 1.8; 
+  max-width: 800px; 
+  margin: 20px auto; 
+  color: #1db954; 
 }
 
 section#about p b {
@@ -180,16 +180,61 @@ header .navbar-logo {
 }
 
 /* image effect */
+#about-me-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 10px; /* Space between items */
+  margin-top: 30px;
+  width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .about-image {
   width: 100%;
-  height: auto;
+  border-radius: 20px;
   object-fit: cover;
-  transition: transform 0.3s ease, filter 0.3s ease;
-  border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .about-image:hover {
-  transform: scale(1.05) rotate(1deg); /* Slight zoom and tilt */
-  filter: brightness(1.2); /* Brightens image */
+  transform: scale(1.1); /* Slight zoom */
+  filter: brightness(1.2); /* Brighten image */
+}
+
+.dynamic-grid-item {
+  grid-row-end: span var(--row-span); /* Use a CSS variable for dynamic spans */
+}
+/* camera (Image 1) */
+.about-image:nth-child(1) {
+  grid-column: 1;
+  grid-row-start: 1; 
+  grid-row-end: span 4; 
+}
+/* mountain */
+.about-image:nth-child(2) {
+  grid-column: 3; 
+  grid-row-start: 1; 
+  grid-row-end: span 3; 
+}
+/* skydive */
+.about-image:nth-child(3) {
+  grid-column: 3; 
+  grid-row-start: 3; 
+  grid-row-end: span 3; 
+}
+
+/* hot */
+.about-image:nth-child(5) {
+  grid-column: 2; 
+  grid-row-start: 3; 
+  grid-row-end: span 3; 
+}
+/* forehead */
+.about-image:nth-child(6) {
+  grid-column: 3; 
+  grid-row-start: 1; 
+  grid-row-end: span 3; 
 }

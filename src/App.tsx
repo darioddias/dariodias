@@ -55,7 +55,7 @@ const App = () => {
             margin: '0 auto',
           }}
         >
-          Hey, I'm <span style={{ color: 'white' }}>Dario</span>
+          <span style={{ color: 'white' }}>//</span> Hey, I'm <span style={{ color: 'white' }}>Dario</span>
         </h1>
       </section>
 

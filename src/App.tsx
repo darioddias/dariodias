@@ -4,13 +4,6 @@ import { useEffect } from 'react';
 
 const App = () => {
   useEffect(() => {
-    // Apply random grid-row spans to create the dynamic staggered effect
-    const galleryItems = document.querySelectorAll('.about-image');
-    galleryItems.forEach((item) => {
-      const randomSpan = Math.floor(Math.random() * 3) + 2; // Random span between 2 and 4
-      (item as HTMLElement).style.gridRowEnd = `span ${randomSpan}`;
-    });
-
     // Fade-in effect for the gallery
     const gallery = document.getElementById('about-me-gallery');
     const observer = new IntersectionObserver(
@@ -25,9 +18,10 @@ const App = () => {
       { threshold: 0.1 }
     );
     if (gallery) observer.observe(gallery);
-
+  
     return () => observer.disconnect();
   }, []);
+  
 
   return (
     <div style={{ paddingTop: '60px' }}>
@@ -53,27 +47,30 @@ const App = () => {
 
       {/* About Me Section */}
       <section id="aboutme" style={{ minHeight: '100vh', padding: '50px', textAlign: 'center' }}>
-        <h2 className="typing">
-          <span style={{ color: 'white' }}>//</span> About{' '}
-          <span style={{ color: 'white' }}>Me</span>
-        </h2>
-        <p>
-          Howdy! My name is Dario Dias and I'm a{' '}
-          <b style={{ color: 'white' }}>Dallas, TX</b> based computer science student at the{' '}
-          <b style={{ color: 'white' }}>University of North Texas</b>. I love working with technology and
-          I'm interested in <b style={{ color: 'white' }}>IT</b>. In my free time, I love to listen to
-          music, play video games, and take pictures!
-        </p>
-        
-        <div id="about-me-gallery">
-          <img src="/images/dariocamera.jpg" alt="Image 1" className="about-image" />
-          <img src="/images/dariomountain.jpg" alt="Image 2" className="about-image" />
-          <img src="/images/darioskydive.jpg" alt="Image 3" className="about-image" />
-          
-          <img src="/images/dariohot.jpg" alt="Image 5" className="about-image" />
-          <img src="/images/dariohead.jpg" alt="Image 6" className="about-image" />
-        </div>
-      </section>
+  <h2 className="typing">
+    <span style={{ color: 'white' }}>//</span> About{' '}
+    <span style={{ color: 'white' }}>Me</span>
+  </h2>
+  <p>
+    Howdy! My name is Dario Dias and I'm a{' '}
+    <b style={{ color: 'white' }}>Dallas, TX</b> based computer science student at the{' '}
+    <b style={{ color: 'white' }}>University of North Texas</b>. I love working with technology and
+    I'm interested in <b style={{ color: 'white' }}>IT</b>. In my free time, I love to listen to
+    music, play video games, and take pictures!
+  </p>
+
+  {/* Card Wrapper */}
+  <div className="gallery-card">
+    <div id="about-me-gallery">
+      <img src="/images/dariocamera.jpg" alt="Image 1" className="about-image" />
+      <img src="/images/dariohot.jpg" alt="Image 2" className="about-image" />
+      <img src="/images/dariohead.jpg" alt="Image 3" className="about-image" />
+      <img src="/images/dariomountain.jpg" alt="Image 5" className="about-image" />
+      <img src="/images/darioskydive.jpg" alt="Image 6" className="about-image" />
+      
+    </div>
+  </div>
+</section>
 
       {/* Experience Section */}
       <section id="experience" style={{ minHeight: '100vh', padding: '50px', textAlign: 'center' }}>

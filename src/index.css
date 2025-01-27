@@ -24,7 +24,7 @@ section#contactme h2 span.highlight {
 }
 
 /* About Section */
-section#about {
+section#aboutme {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,16 +33,22 @@ section#about {
   text-align: center;
 }
 
-section#about p {
-  font-size: 1.8rem; 
-  line-height: 1.8; 
-  max-width: 800px; 
-  margin: 20px auto; 
-  color: #1db954; 
+section#aboutme p {
+  font-size: 2rem; /* Large font size */
+  line-height: 1; /* Improve readability */
+  max-width: 800px; /* Constrain the text width */
+  margin: 20px auto; /* Center the text */
+  color: #1DB954; /* Keep consistent color scheme */
 }
 
-section#about p b {
-  color: white; /* Highlight specific words */
+section#aboutme h2 {
+  font-size: 3rem; /* Large header */
+  margin-bottom: 20px;
+  color: #1DB954;
+}
+
+section#aboutme p b {
+  color: white; /* Bolded text remains white */
 }
 
 /* Navbar Links (Desktop) */
@@ -128,12 +134,6 @@ section#about p b {
     text-align: left;
   }
 
-  /* About Section */
-  section#about p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    max-width: 90%;
-  }
 
   /* Typing Effect */
   .typing {

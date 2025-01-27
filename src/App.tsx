@@ -46,12 +46,22 @@ const App = () => {
       </section>
 
       {/* About Me Section */}
-      <section id="aboutme" style={{ minHeight: '100vh', padding: '50px', textAlign: 'center' }}>
+      <section
+  id="aboutme"
+  style={{
+    minHeight: '100vh',
+    padding: '50px',
+    textAlign: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  }}
+>
   <h2 className="typing">
     <span style={{ color: 'white' }}>//</span> About{' '}
     <span style={{ color: 'white' }}>Me</span>
   </h2>
-  <p>
+  <p style={{ maxWidth: '800px', fontSize: '1.5rem', lineHeight: '1.5', margin: '20px auto', color: '#1DB954' }}>
     Howdy! My name is Dario Dias and I'm a{' '}
     <b style={{ color: 'white' }}>Dallas, TX</b> based computer science student at the{' '}
     <b style={{ color: 'white' }}>University of North Texas</b>. I love working with technology and
@@ -59,7 +69,6 @@ const App = () => {
     music, play video games, and take pictures!
   </p>
 
-  {/* Card Wrapper */}
   <div className="gallery-card">
     <div id="about-me-gallery">
       <img src="/images/dariocamera.jpg" alt="Image 1" className="about-image" />
@@ -67,10 +76,10 @@ const App = () => {
       <img src="/images/dariohead.jpg" alt="Image 3" className="about-image" />
       <img src="/images/dariomountain.jpg" alt="Image 5" className="about-image" />
       <img src="/images/darioskydive.jpg" alt="Image 6" className="about-image" />
-      
     </div>
   </div>
 </section>
+
 
       {/* Experience Section */}
       <section id="experience" style={{ minHeight: '100vh', padding: '50px', textAlign: 'center' }}>

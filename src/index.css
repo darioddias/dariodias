@@ -63,17 +63,33 @@ section#aboutme p b {
 }
 
 /* Typing Animation Styles */
-.typing {
-  display: inline-block;
-  border-right: 3px solid white; /* Cursor effect */
-  white-space: nowrap;
-  overflow: hidden;
-  animation: none; /* Default state: no animation */
+/* Typing Animation */
+.typing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: black;
 }
 
-.typing.animate {
-  animation: typing 3s steps(20, end), blink 0.6s step-end infinite;
-  animation-fill-mode: forwards; /* Ensure the animation persists */
+.typing {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 24ch; /* Reserve space for the text */
+  text-align: center;
+  position: relative;
+  animation: typing 2s steps(24, end) forwards; /* Typing animation */
+}
+
+.typing::after {
+  content: ''; /* Blinking cursor */
+  position: absolute;
+  top: 0;
+  left: calc(100% + 0.2em); /* Place cursor a small space after the text */
+  height: 100%;
+  border-right: 3px solid white; /* Cursor appearance */
+  animation: blink 0.6s step-end infinite;
 }
 
 @keyframes typing {
@@ -81,15 +97,29 @@ section#aboutme p b {
     width: 0;
   }
   to {
-    width: 100%;
+    width: 24ch; /* Full width of the text */
   }
 }
 
 @keyframes blink {
   50% {
-    border-color: transparent;
+    border-color: transparent; /* Blinking effect */
   }
 }
+
+/* Fade In and Out Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -135,32 +165,7 @@ section#aboutme p b {
   }
 
 
-  /* Typing Effect */
-  .typing {
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 3px solid #1db954;
-    animation: typing 3s steps(30, end), blink 0.5s step-end infinite;
-  }
-  
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
-  
-  @keyframes blink {
-    from {
-      border-color: transparent;
-    }
-    to {
-      border-color: #1db954;
-    }
-  }
+ 
 
   /* General Section Padding */
   section {

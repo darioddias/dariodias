@@ -8,10 +8,11 @@ It's been pretty fun relearning and testing new UI and frontend mechanics, and I
 
 I'm going to be updating it as I learn more cool things, but this is just the start!  
 
-## Project Structure
+## Contact Me
 
-Contact Me
-LinkedIn: Dario Dias
+LinkedIn: www.linkedin.com/in/dario-dia
+
 Email: dariokdias@gmail.com
+
 Website: dariodias.xyz
 

@@ -3,8 +3,8 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: black;
-    color: #1DB954;
-  }
+  color: #1DB954;
+}
 
 html {
   scroll-behavior: smooth;
@@ -12,57 +12,30 @@ html {
 
 /* Section Title Styles */
 section h2 {
-  font-size: 3rem; /* Larger for desktop */
+  font-size: 3rem; /* Matches About Me */
   text-align: center;
   color: #1DB954;
-}
-
-/* Highlight Specific Words */
-section#about h2 span.highlight,
-section#contactme h2 span.highlight {
-  color: white;
-}
-
-/* About Section */
-section#aboutme {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
-  text-align: center;
-}
-
-section#aboutme p {
-  font-size: 2rem; /* Large font size */
-  line-height: 1; /* Improve readability */
-  max-width: 800px; /* Constrain the text width */
-  margin: 20px auto; /* Center the text */
-  color: #1DB954; /* Keep consistent color scheme */
-}
-
-section#aboutme h2 {
-  font-size: 3rem; /* Large header */
   margin-bottom: 20px;
+}
+
+/* Ensure uniform styling across all sections */
+section#aboutme h2,
+section#experience h2,
+section#projects h2,
+section#contactme h2 {
+  font-size: 3rem; /* Ensure all headings are the same */
   color: #1DB954;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-section#aboutme p b {
-  color: white; /* Bolded text remains white */
+/* Responsive Adjustment for Smaller Screens */
+@media (max-width: 768px) {
+  section h2 {
+    font-size: 2.5rem; /* Adjust for mobile */
+  }
 }
 
-/* Navbar Links (Desktop) */
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
-
-/* Hamburger Menu */
-.hamburger-menu {
-  display: none;
-}
-
-/* Typing Animation Styles */
 /* Typing Animation */
 .typing-container {
   display: flex;
@@ -80,17 +53,17 @@ section#aboutme p b {
   overflow: hidden;
   max-width: 100%;
   text-align: center;
-  font-size: 5rem;;
+  font-size: 5rem;
   position: relative;
-  animation: typing 2s steps(24, end) forwards; /* Typing animation */
+  animation: typing 2s steps(24, end) forwards;
 }
 
 .typing::after {
-  content: ''; /* Blinking cursor */
+  content: '';
   position: absolute;
-  right: 0; /* Adjust cursor position */
-  border-right: 3px solid white; /* Cursor appearance */
-  animation: blink 0.6s step-end infinite; /* Cursor blinking */
+  right: -0.2em;
+  border-right: 3px solid white;
+  animation: blink 0.6s step-end infinite;
 }
 
 @keyframes typing {
@@ -98,17 +71,17 @@ section#aboutme p b {
     width: 0;
   }
   to {
-    width: 100%; /* Full width of the text */
+    width: 100%;
   }
 }
 
 @keyframes blink {
   50% {
-    border-color: transparent; /* Blinking effect */
+    border-color: transparent;
   }
 }
 
-/* Fade In and Out Animation */
+/* Fade In and Out */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -120,76 +93,11 @@ section#aboutme p b {
   transform: translateY(0);
 }
 
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  /* Section Titles */
-  section h2 {
-    font-size: 2.5rem; /* Adjust title size for mobile */
-  }
-
-  /* Navbar Styles */
-  header nav {
-    gap: 8px; /* Adjust spacing for mobile */
-  }
-
-  header nav button {
-    font-size: 16px; /* Smaller navbar text size */
-  }
-
-  /* Mobile Navbar */
-  .nav-links {
-    display: none; /* Hidden by default */
-    position: absolute;
-    top: 60px;
-    right: 0;
-    flex-direction: column;
-    background-color: black;
-    padding: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    gap: 10px;
-  }
-
-  .nav-links.open {
-    display: flex; /* Show when menu is toggled open */
-  }
-
-  .hamburger-menu {
-    display: block; /* Visible on mobile */
-  }
-
-  .nav-links button {
-    font-size: 1.2rem;
-    padding: 10px;
-    text-align: left;
-  }
-
-
- 
-
-  /* General Section Padding */
-  section {
-    padding: 20px;
-  }
-}
-
-/* styles for the header and logo */
-header {
-  border-bottom: 4px solid #1DB954; /* Green border */
-}
-
-header .navbar-logo {
-  font-size: 20px;
-  font-weight: bold;
-  color: #1DB954;
-}
-
-/* image effect */
+/* Album Styles */
 #about-me-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three columns */
-  gap: 10px; /* Space between items */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
   margin-top: 30px;
   width: 90%;
   max-width: 1200px;
@@ -212,34 +120,84 @@ header .navbar-logo {
 }
 
 /* Fixed Layout for Each Image */
-/* Image 1 */
 .about-image:nth-child(1) {
-  grid-column: 1; /* Place in column 1 */
-  grid-row-end: span 3; /* Set height */
+  grid-column: 1;
+  grid-row-end: span 3;
 }
 
-/* Image 2 */
 .about-image:nth-child(2) {
   grid-column: 2;
   grid-row-end: span 2;
 }
 
-/* Image 3 */
 .about-image:nth-child(3) {
   grid-column: 2;
   grid-row-end: span 2;
 }
 
-/* Image 5 */
 .about-image:nth-child(5) {
   grid-column: 3;
-  grid-row-start: 1; /* Start in the first row */
+  grid-row-start: 1;
   grid-row-end: span 1;
 }
 
-/* Image 6 */
 .about-image:nth-child(6) {
   grid-column: 3;
-
   grid-row-end: span 1;
+}
+
+/* Navbar */
+header {
+  border-bottom: 4px solid #1DB954;
+}
+
+header .navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1DB954;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  section h2 {
+    font-size: 2.5rem;
+  }
+
+  header nav {
+    gap: 8px;
+  }
+
+  header nav button {
+    font-size: 16px;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    flex-direction: column;
+    background-color: black;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    gap: 10px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .nav-links button {
+    font-size: 1.2rem;
+    padding: 10px;
+    text-align: left;
+  }
+
+  section {
+    padding: 20px;
+  }
 }

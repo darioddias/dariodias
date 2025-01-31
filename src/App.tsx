@@ -123,7 +123,15 @@ const App = () => {
         <h2 className="typing">
           <span style={{ color: 'white' }}>//</span> Experience
         </h2>
-        <p>Here's my experience!</p>
+        <p
+        style={{
+          maxWidth: '800px',
+          fontSize: '1.5rem',
+          lineHeight: '1.5',
+          margin: '20px auto',
+          color: '#1DB954',
+        }}
+        >Here's my experience!</p>
       </section>
 
       {/* Projects Section */}

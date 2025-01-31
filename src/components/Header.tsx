@@ -8,7 +8,7 @@ const Header = () => {
     const element = document.getElementById(id);
     if (element) {
       const headerHeight = 60; // Height of the header
-      const additionalOffset = -100;
+      const additionalOffset = 20;
       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - headerHeight - additionalOffset;
   

@@ -29,6 +29,7 @@ section#contactme h2 {
   margin-bottom: 20px;
 }
 
+
 /* Responsive Adjustment for Smaller Screens */
 @media (max-width: 768px) {
   section h2 {
@@ -198,6 +199,6 @@ header .navbar-logo {
   }
 
   section {
-    padding: 20px;
+    padding: 50px 20px;
   }
 }

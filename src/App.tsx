@@ -82,27 +82,27 @@ const App = () => {
         <div className="gallery-card">
           <div id="about-me-gallery">
             <img
-              src="/images/dariocamera.jpg"
+              src="images/dariocamera.jpg"
               alt="Image 1"
               className="about-image"
             />
             <img
-              src="/images/dariohot.jpg"
+              src="images/dariohot.jpg"
               alt="Image 2"
               className="about-image"
             />
             <img
-              src="/images/dariohead.jpg"
+              src="images/dariohead.jpg"
               alt="Image 3"
               className="about-image"
             />
             <img
-              src="/images/dariomountain.jpg"
+              src="images/dariomountain.jpg"
               alt="Image 5"
               className="about-image"
             />
             <img
-              src="/images/darioskydive.jpg"
+              src="images/darioskydive.jpg"
               alt="Image 6"
               className="about-image"
             />

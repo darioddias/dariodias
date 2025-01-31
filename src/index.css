@@ -6,8 +6,10 @@ body {
   color: #1DB954;
 }
 
-html {
+body, html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100vw;
 }
 
 /* Section Title Styles */

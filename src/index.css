@@ -68,16 +68,19 @@ section#aboutme p b {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   background-color: black;
+  position: relative;
 }
 
 .typing {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
-  width: 24ch; /* Reserve space for the text */
+  max-width: 100%;
   text-align: center;
+  font-size: 5rem;;
   position: relative;
   animation: typing 2s steps(24, end) forwards; /* Typing animation */
 }
@@ -85,11 +88,9 @@ section#aboutme p b {
 .typing::after {
   content: ''; /* Blinking cursor */
   position: absolute;
-  top: 0;
-  left: calc(100% + 0.2em); /* Place cursor a small space after the text */
-  height: 100%;
+  right: 0; /* Adjust cursor position */
   border-right: 3px solid white; /* Cursor appearance */
-  animation: blink 0.6s step-end infinite;
+  animation: blink 0.6s step-end infinite; /* Cursor blinking */
 }
 
 @keyframes typing {
@@ -97,7 +98,7 @@ section#aboutme p b {
     width: 0;
   }
   to {
-    width: 24ch; /* Full width of the text */
+    width: 100%; /* Full width of the text */
   }
 }
 

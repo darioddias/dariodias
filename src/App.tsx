@@ -36,24 +36,9 @@ const App = () => {
       <section
         id="home"
         className="typing-container fade-in"
-        style={{
-          minHeight: '100vh',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          flexDirection: 'column',
-          padding: '20px',
-          backgroundColor: 'black',
-          color: '#1DB954',
-          fontSize: '3rem',
-        }}
       >
         <h1
           className="typing"
-          style={{
-            fontSize: '5rem',
-            margin: '0 auto',
-          }}
         >
           <span style={{ color: 'white' }}>//</span> Hey, I'm <span style={{ color: 'white' }}>Dario</span>
         </h1>

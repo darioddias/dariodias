@@ -168,22 +168,94 @@ const App = () => {
       </section>
 
 
+       {/* Projects Section */}
+<section
+  id="projects"
+  className="fade-in"
+  style={{
+    minHeight: '100vh',
+    padding: '50px',
+    textAlign: 'center',
+  }}
+>
+  <h2 className="typing">
+    <span style={{ color: '#f0b634' }}>//</span> Projects
+  </h2>
 
-      {/* Projects Section */}
-      <section
-        id="projects"
-        className="fade-in"
-        style={{
-          minHeight: '100vh',
-          padding: '50px',
-          textAlign: 'center',
-        }}
-      >
-        <h2 className="typing">
-          <span style={{ color: '#f0b634' }}>//</span> Projects
-        </h2>
-        <p>Here is some of my work!</p>
-      </section>
+  <div className="projects-container">
+    {/* Project 1: r3wind */}
+    <div className="project-card">
+      <h3>r3wind</h3>
+      <p className="project-description">
+        A music tracking app that connects with Spotify to display listening habits.
+      </p>
+      <div className="tech-stack">
+        <span className="tech-badge react">React</span>
+        <span className="tech-badge vite">Vite</span>
+        <span className="tech-badge flask">Flask</span>
+        <span className="tech-badge api">Spotify API</span>
+      </div>
+      <div className="project-links">
+        <a
+          href="https://github.com/darioddias/r3wind"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-button"
+        >
+          View
+        </a>
+      </div>
+    </div>
+
+    {/* Project 2: Network Speed Test */}
+    <div className="project-card">
+      <h3>Network Speed Test</h3>
+      <p className="project-description">
+        A tool to measure network speeds and analyze latency.
+      </p>
+      <div className="tech-stack">
+        <span className="tech-badge python">Python</span>
+        <span className="tech-badge flask">Flask</span>
+        <span className="tech-badge api">Speedtest API</span>
+      </div>
+      <div className="project-links">
+        <a
+          href="https://github.com/darioddias/NetworkSpeedTest"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-button"
+        >
+          View
+        </a>
+      </div>
+    </div>
+
+    {/* Project 3: JWKS Server */}
+    <div className="project-card">
+      <h3>JWKS Server</h3>
+      <p className="project-description">
+        JSON Web Key Set server implementation for authentication.
+      </p>
+      <div className="tech-stack">
+        <span className="tech-badge node">Node.js</span>
+        <span className="tech-badge express">Express</span>
+        <span className="tech-badge jwt">JWT</span>
+      </div>
+      <div className="project-links">
+        <a
+          href="https://github.com/darioddias/JWKS-Server"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-button"
+        >
+          View
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+      
 
       {/* Contact Me Section */}
 <section

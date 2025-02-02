@@ -25,7 +25,7 @@ const Header = () => {
         position: 'fixed',
         top: 0,
         width: '100%',
-        backgroundColor: '#19192e',
+        backgroundColor: '#0c0c21',
         zIndex: 1000,
         borderBottom: '4px solid #f0b634',
       }}

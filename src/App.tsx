@@ -1,9 +1,32 @@
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+
+const GITHUB_LANG_COLORS: { [key: string]: string } = {
+  TypeScript: "#3178C6",
+  JavaScript: "#F1E05A",
+  CSS: "#563D7C",
+  HTML: "#E34C26",
+  Python: "#3572A5",
+  Go: "#00ADD8",
+  Rust: "#DEA584",
+  Shell: "#89E051",
+};
 
 const App = () => {
+  const [languages, setLanguages] = useState<{ [key: string]: number }>({});
+  const [totalBytes, setTotalBytes] = useState(0);
+
   useEffect(() => {
+    // Fetch GitHub repository language stats
+    fetch("https://api.github.com/repos/darioddias/dariodias/languages")
+      .then((response) => response.json())
+      .then((data) => {
+        setLanguages(data);
+        setTotalBytes(Object.values(data).reduce((a, b) => a + b, 0));
+      })
+      .catch((error) => console.error("Error fetching languages:", error));
+
     // Typing Animation
     const typingElements = document.querySelectorAll('.typing');
     typingElements.forEach((el) => {
@@ -29,6 +52,7 @@ const App = () => {
 
     return () => observer.disconnect();
   }, []);
+
 
   return (
     <div style={{ paddingTop: '60px' }}>
@@ -305,6 +329,33 @@ const App = () => {
   </div>
 </section>
 
+       {/* GitHub-Style Language Bar */}
+       <section className="language-stats">
+        <h3>stats</h3>
+        <div className="language-bar">
+          {Object.entries(languages).map(([language, bytes]) => (
+            <div
+              key={language}
+              className="language-segment"
+              style={{
+                width: `${(bytes / totalBytes) * 100}%`,
+                backgroundColor: GITHUB_LANG_COLORS[language] || "#CCCCCC",
+              }}
+            ></div>
+          ))}
+        </div>
+        <ul className="language-list">
+          {Object.entries(languages).map(([language, bytes]) => (
+            <li key={language}>
+              <span
+                className="language-dot"
+                style={{ backgroundColor: GITHUB_LANG_COLORS[language] || "#CCCCCC" }}
+              ></span>
+              {language}: {((bytes / totalBytes) * 100).toFixed(1)}%
+            </li>
+          ))}
+        </ul>
+      </section>
 
       <Footer />
     </div>

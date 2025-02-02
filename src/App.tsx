@@ -40,7 +40,7 @@ const App = () => {
         <h1
           className="typing"
         >
-          <span style={{ color: 'white' }}>//</span> Hey, I'm <span style={{ color: 'white' }}>Dario</span>
+          <span style={{ color: '#f0b634' }}>//</span> Hey, I'm <span style={{ color: '#f0b634' }}>Dario</span>
         </h1>
       </section>
 
@@ -58,8 +58,8 @@ const App = () => {
         }}
       >
         <h2 className="typing">
-          <span style={{ color: 'white' }}>//</span> About{' '}
-          <span style={{ color: 'white' }}>Me</span>
+          <span style={{ color: '#f0b634' }}>//</span> About{' '}
+          <span style={{ color: '#f0b634' }}>Me</span>
         </h2>
         <p
           style={{
@@ -67,15 +67,15 @@ const App = () => {
             fontSize: '1.5rem',
             lineHeight: '1.5',
             margin: '20px auto',
-            color: '#1DB954',
+            color: 'white',
           }}
         >
           Howdy! My name is Dario Dias and I'm a{' '}
-          <b style={{ color: 'white' }}>Dallas, TX</b> based computer science
+          <b style={{ color: '#f0b634' }}>Dallas, TX</b> based computer science
           student at the{' '}
-          <b style={{ color: 'white' }}>University of North Texas</b>. I love
+          <b style={{ color: '#f0b634' }}>University of North Texas</b>. I love
           working with technology and I'm interested in{' '}
-          <b style={{ color: 'white' }}>IT</b>. In my free time, I love to
+          <b style={{ color: '#f0b634' }}>IT</b>. In my free time, I love to
           listen to music, play video games, and take pictures!
         </p>
 
@@ -121,7 +121,7 @@ const App = () => {
         }}
       >
         <h2 className="typing">
-          <span style={{ color: 'white' }}>//</span> Experience
+          <span style={{ color: '#f0b634' }}>//</span> Experience
         </h2>
         <div className="experience-container">
 
@@ -180,7 +180,7 @@ const App = () => {
         }}
       >
         <h2 className="typing">
-          <span style={{ color: 'white' }}>//</span> Projects
+          <span style={{ color: '#f0b634' }}>//</span> Projects
         </h2>
         <p>Here is some of my work!</p>
       </section>
@@ -196,8 +196,8 @@ const App = () => {
         }}
       >
         <h2 className="typing">
-          <span style={{ color: 'white' }}>//</span> Contact{' '}
-          <span style={{ color: 'white' }}>Me!</span>
+          <span style={{ color: '#f0b634' }}>//</span> Contact{' '}
+          <span style={{ color: '#f0b634' }}>Me!</span>
         </h2>
         <ul
           style={{
@@ -208,7 +208,7 @@ const App = () => {
         >
           <li>
             You can contact me at{' '}
-            <b style={{ color: 'white', fontWeight: 'bold' }}>
+            <b style={{ color: '#f0b634', fontWeight: 'bold' }}>
               dariokdias@gmail.com
             </b>
           </li>
@@ -219,7 +219,7 @@ const App = () => {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                color: 'white',
+                color: '#f0b634',
                 textDecoration: 'none',
                 fontWeight: 'bold',
               }}
@@ -234,7 +234,7 @@ const App = () => {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                color: 'white',
+                color: '#f0b634',
                 textDecoration: 'none',
                 fontWeight: 'bold',
               }}

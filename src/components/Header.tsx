@@ -25,9 +25,9 @@ const Header = () => {
         position: 'fixed',
         top: 0,
         width: '100%',
-        backgroundColor: 'black',
+        backgroundColor: '#09090f',
         zIndex: 1000,
-        borderBottom: '4px solid #1DB954',
+        borderBottom: '4px solid #f0b634',
       }}
     >
       <nav
@@ -43,7 +43,7 @@ const Header = () => {
           style={{
             fontSize: '20px',
             fontWeight: 'bold',
-            color: '#1DB954',
+            color: '#f0b634',
             marginLeft: '-20px', // Moves Dario more left
           }}
         >
@@ -67,7 +67,7 @@ const Header = () => {
                 style={{
                   background: 'none',
                   border: 'none',
-                  color: activeSection === id ? 'white' : '#1DB954',
+                  color: activeSection === id ? '#ffffff' : '#f0b634',
                   fontSize: '14px',
                   whiteSpace: 'nowrap',
                   cursor: 'pointer',

@@ -2,8 +2,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: black;
-  color: #1DB954;
+  background-color: #09090f; /* Updated Background */
+  color: #ffffff; /* Updated Primary Text */
 }
 
 body, html {
@@ -14,9 +14,9 @@ body, html {
 
 /* Section Title Styles */
 section h2 {
-  font-size: 3rem; /* Matches About Me */
+  font-size: 3rem;
   text-align: center;
-  color: #1DB954;
+  color: #f0b634; /* Updated from white */
   margin-bottom: 20px;
 }
 
@@ -25,17 +25,16 @@ section#aboutme h2,
 section#experience h2,
 section#projects h2,
 section#contactme h2 {
-  font-size: 3rem; /* Ensure all headings are the same */
-  color: #1DB954;
+  font-size: 3rem;
+  color: white; /* Updated from white */
   text-align: center;
   margin-bottom: 20px;
 }
 
-
 /* Responsive Adjustment for Smaller Screens */
 @media (max-width: 768px) {
   section h2 {
-    font-size: 2.5rem; /* Adjust for mobile */
+    font-size: 2.5rem;
   }
 }
 
@@ -46,7 +45,7 @@ section#contactme h2 {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: black;
+  background-color: #09090f; /* Updated Background */
   position: relative;
 }
 
@@ -62,18 +61,16 @@ section#contactme h2 {
 }
 
 .typing::after {
-  content: '|'; /* Blinking cursor */
+  content: '|';
   position: relative;
-  right: -3px; /* Slight left offset for better alignment */
-  top: -5px; /* Moves cursor slightly up */
-  width: 2px; /* Thinner cursor */
-  height: 1em; /* Match text height */
-  background-color: transparent;
-  color: white;
+  right: -3px;
+  top: -5px;
+  width: 2px;
+  height: 1em;
+  color: #f0b634; /* Updated from green to white */
   font-weight: bold;
   animation: blink 0.8s step-end infinite;
 }
-
 
 .typing.animate {
   width: 100%;
@@ -123,7 +120,7 @@ section#contactme h2 {
   width: 100%;
   border-radius: 15px;
   object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(240, 182, 52, 0.3); /* Gold Yellow Glow */
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -160,63 +157,7 @@ section#contactme h2 {
   grid-row-end: span 1;
 }
 
-/* Navbar */
-header {
-  border-bottom: 4px solid #1DB954;
-}
-
-header .navbar-logo {
-  font-size: 20px;
-  font-weight: bold;
-  color: #1DB954;
-}
-
-/* Responsive Navbar */
-@media (max-width: 768px) {
-  section h2 {
-    font-size: 2.5rem;
-  }
-
-  header nav {
-    gap: 8px;
-  }
-
-  header nav button {
-    font-size: 16px;
-  }
-
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    flex-direction: column;
-    background-color: black;
-    padding: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    gap: 10px;
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .hamburger-menu {
-    display: block;
-  }
-
-  .nav-links button {
-    font-size: 1.2rem;
-    padding: 10px;
-    text-align: left;
-  }
-
-  section {
-    padding: 50px 20px;
-  }
-}
-
-
+/* Experience Cards */
 .experience-container {
   display: flex;
   flex-direction: column;
@@ -226,36 +167,32 @@ header .navbar-logo {
 }
 
 .experience-card {
-  background-color: #161b22;
+  background-color: #1a1a1a; /* Slightly lighter than background for contrast */
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
+  box-shadow: 0 0 15px rgba(240, 182, 52, 0.3);
   transition: transform 0.3s ease;
 }
-
-.experience-card b {
-  color: #1DB954;
-}
-
 
 .experience-card:hover {
   transform: translateY(-5px);
 }
 
+/* Experience Text */
 .experience-card h3 {
-  color: white;
+  color: #f0b634; 
   font-size: 1.8rem;
   margin-bottom: 5px;
 }
 
 .company {
-  color: #1DB954;
+  color: #ffffff; 
   font-size: 1.2rem;
   margin-bottom: 5px;
 }
 
 .date {
-  color: white;
+  color: white; 
   font-size: 1rem;
   margin-bottom: 10px;
 }
@@ -267,9 +204,31 @@ header .navbar-logo {
   margin-left: 0;
 }
 
+.experience-card b {
+  color: #f0b634;
+}
+
 .experience-card li {
   font-size: 1.1rem;
   margin-bottom: 5px;
-  color: #c9d1d9;
+  color: #ffffff; /
   text-align: left;
+}
+
+/* Buttons for navbar*/
+button {
+  background-color: transparent;
+  border: 2px solid #f0b634; /
+  color: #f0b634;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #f0b634;
+  color: #09090f;
+  border-color: #ffffff; 
 }

@@ -234,3 +234,23 @@ button:hover {
   color: #09090f;
   border-color: #ffffff; 
 }
+
+/* Contact Me Section */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+  color: #f0b634;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-icon:hover {
+  transform: scale(1.2);
+  color: #ffffff;
+}

@@ -186,64 +186,53 @@ const App = () => {
       </section>
 
       {/* Contact Me Section */}
-      <section
-        id="contactme"
-        className="fade-in"
-        style={{
-          minHeight: '100vh',
-          padding: '50px',
-          textAlign: 'center',
-        }}
-      >
-        <h2 className="typing">
-          <span style={{ color: '#f0b634' }}>//</span> Contact{' '}
-          <span style={{ color: '#f0b634' }}>Me!</span>
-        </h2>
-        <ul
-          style={{
-            maxWidth: '800px',
-            listStyleType: 'disc',
-            paddingLeft: '20px',
-          }}
-        >
-          <li>
-            You can contact me at{' '}
-            <b style={{ color: '#f0b634', fontWeight: 'bold' }}>
-              dariokdias@gmail.com
-            </b>
-          </li>
-          <li>
-            Connect with me on{' '}
-            <a
-              href="https://www.linkedin.com/in/dario-dias"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                color: '#f0b634',
-                textDecoration: 'none',
-                fontWeight: 'bold',
-              }}
-            >
-              LinkedIn!
-            </a>
-          </li>
-          <li>
-            Check out my{' '}
-            <a
-              href="https://github.com/darioddias"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                color: '#f0b634',
-                textDecoration: 'none',
-                fontWeight: 'bold',
-              }}
-            >
-              GitHub :D
-            </a>
-          </li>
-        </ul>
-      </section>
+<section
+  id="contactme"
+  className="fade-in"
+  style={{
+    minHeight: '100vh',
+    padding: '50px',
+    textAlign: 'center',
+  }}
+>
+  <h2 className="typing">
+    <span style={{ color: '#f0b634' }}>//</span> Contact{' '}
+    <span style={{ color: '#f0b634' }}>Me!</span>
+  </h2>
+
+  <div className="contact-container">
+    {/* Email */}
+    <a
+      href="mailto:dariokdias@gmail.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="contact-icon"
+    >
+      <i className="fas fa-envelope"></i>
+    </a>
+
+    {/* LinkedIn */}
+    <a
+      href="https://www.linkedin.com/in/dario-dias"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="contact-icon"
+    >
+      <i className="fab fa-linkedin"></i>
+    </a>
+
+    {/* GitHub */}
+    <a
+      href="https://github.com/darioddias"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="contact-icon"
+    >
+      <i className="fab fa-github"></i>
+    </a>
+  </div>
+</section>
+
 
       <Footer />
     </div>

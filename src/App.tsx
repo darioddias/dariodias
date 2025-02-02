@@ -26,30 +26,44 @@ const App = () => {
         setTotalBytes(Object.values(data).reduce((a, b) => a + b, 0));
       })
       .catch((error) => console.error("Error fetching languages:", error));
-
+  
     // Typing Animation
     const typingElements = document.querySelectorAll('.typing');
     typingElements.forEach((el) => {
       el.classList.add('animate'); // Adds the animate class to trigger animation
     });
-
-    // Fade-in and Fade-out on Scroll
+  
+    // Arrow & Fade-in Observer
+    const scrollIndicator = document.querySelector(".scroll-indicator");
     const fadeElements = document.querySelectorAll('.fade-in');
+  
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+          if (entry.target.classList.contains("scroll-indicator")) {
+            // Hide or show scroll indicator
+            if (!entry.isIntersecting) {
+              scrollIndicator?.classList.add("hidden");
+            } else {
+              scrollIndicator?.classList.remove("hidden");
+            }
           } else {
-            entry.target.classList.remove('visible');
+            // Handle fade-in effect
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            } else {
+              entry.target.classList.remove("visible");
+            }
           }
         });
       },
       { threshold: 0.1 }
     );
-
+  
+    // Observe elements
+    observer.observe(document.querySelector("#home")!);
     fadeElements.forEach((el) => observer.observe(el));
-
+  
     return () => observer.disconnect();
   }, []);
 
@@ -66,6 +80,10 @@ const App = () => {
         >
           <span style={{ color: '#f0b634' }}>//</span> Hey, I'm <span style={{ color: '#f0b634' }}>Dario</span>
         </h1>
+
+        <div className="scroll-indicator fade-in">
+          <i className="fas fa-chevron-down"></i> {/* FontAwesome icon */}
+        </div>
       </section>
 
       {/* About Me Section */}

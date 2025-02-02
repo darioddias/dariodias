@@ -123,16 +123,51 @@ const App = () => {
         <h2 className="typing">
           <span style={{ color: 'white' }}>//</span> Experience
         </h2>
-        <p
-        style={{
-          maxWidth: '800px',
-          fontSize: '1.5rem',
-          lineHeight: '1.5',
-          margin: '20px auto',
-          color: '#1DB954',
-        }}
-        >Here's my experience!</p>
+        <div className="experience-container">
+
+    {/* IT Support Specialist */}
+    <div className="experience-card">
+      <h3>IT Support Specialist</h3>
+      <p className="company">UNT College of Education | Denton, Texas</p>
+      <p className="date">September 2024 – Present</p>
+      <ul>
+        <li>Managed user requests via <b>RDP</b> and <b>Active Directory</b>, resolving <b>90%</b> of issues on first attempt.</li>
+        <li>Assisted faculty with university <b>hardware troubleshooting</b>, reducing downtime by <b>30%</b>.</li>
+        <li>Collaborated with a small team to efficiently address <b>IT support tickets</b>.</li>
+        <li>Enforced <b>security policies</b> to ensure compliance with university <b>IT standards</b>.</li>
+        <li>Provided <b>in-person</b> and <b>virtual assistance</b>, enhancing support accessibility for faculty and staff.</li>
+      </ul>
+    </div>
+
+    {/* Research Assistant */}
+    <div className="experience-card">
+      <h3>Research Assistant</h3>
+      <p className="company">UNT College of Engineering | Denton, Texas</p>
+      <p className="date">August 2023 – May 2024</p>
+      <ul>
+        <li>Researched <b>multithreaded</b> and <b>multicore architectures</b>, analyzing <b>processing</b> and <b>memory systems</b> for efficiency improvements.</li>
+        <li>Developed and tested software tools like <b>GEM5</b> and <b>Cacti</b>, optimizing cache memory and enhancing hardware performance.</li>
+        <li>Engineered <b>hardware/software solutions</b> to improve <b>system performance</b> and reduce <b>energy consumption</b> by <b>45.7%</b>.</li>
+      </ul>
+    </div>
+
+    {/* IT Help Desk */}
+    <div className="experience-card">
+      <h3>IT Help Desk</h3>
+      <p className="company">UNT College of Engineering | Denton, Texas</p>
+      <p className="date">March 2022 – August 2023</p>
+      <ul>
+        <li>Deployed and managed over <b>3,000 desktops</b> and devices, ensuring seamless operation.</li>
+        <li>Diagnosed and repaired <b>hardware</b> and <b>software issues</b> on <b>Dell enterprise computers</b>, reducing downtime by <b>25%</b>.</li>
+        <li>Troubleshot and resolved <b>system failures</b>, improving overall <b>IT efficiency</b>.</li>
+        <li>Maintained <b>software installations</b>, ensuring up-to-date and secure systems.</li>
+      </ul>
+    </div>
+
+      </div>
       </section>
+
+
 
       {/* Projects Section */}
       <section

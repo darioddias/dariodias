@@ -213,14 +213,14 @@ section#contactme h2 {
 .experience-card li {
   font-size: 1.1rem;
   margin-bottom: 5px;
-  color: #ffffff; /
+  color: #ffffff; 
   text-align: left;
 }
 
 /* Buttons for navbar*/
 button {
   background-color: transparent;
-  border: 2px solid #f0b634; /
+  border: 2px solid #f0b634; 
   color: #f0b634;
   padding: 10px 15px;
   text-transform: uppercase;

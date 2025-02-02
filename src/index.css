@@ -65,6 +65,7 @@ section#contactme h2 {
   text-decoration: none;
   color: #f0b634;
   font-size: 16px;
+  font-weight: bold;
   transition: color 0.3s;
 }
 
@@ -533,14 +534,14 @@ button:hover {
 /* Arrow */
 .scroll-indicator {
   font-size: 2.5rem;
-  color: #f0b634; /* Matches your theme */
+  color: #f0b634; 
   text-align: center;
   position: absolute;
   bottom: 10rem;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  animation: fadeIn 1s ease-in-out 1s forwards, bounce 1.5s infinite alternate;
+  animation: fadeIn 1s ease-in-out 1s forwards, bounce 1s infinite alternate;
   cursor: pointer;
 }
 

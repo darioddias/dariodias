@@ -1,86 +1,59 @@
-import { useState } from 'react';
+import { useState, useEffect } from "react";
 
 const Header = () => {
-  const [activeSection, setActiveSection] = useState<string>('home');
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
-  const handleNavigation = (id: string) => {
-    setActiveSection(id);
-    const element = document.getElementById(id);
-    if (element) {
-      const headerHeight = 60;
-      const additionalOffset = 20;
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - headerHeight - additionalOffset;
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+      if (window.innerWidth >= 768) {
+        setMenuOpen(false); // Close menu when switching back to desktop
+      }
+    };
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
-    }
-  };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
-    <header
-      style={{
-        position: 'fixed',
-        top: 0,
-        width: '100%',
-        backgroundColor: '#0c0c21',
-        zIndex: 1000,
-        borderBottom: '4px solid #f0b634',
-      }}
-    >
-      <nav
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          padding: '10px 3%', // Adjusted padding for more spacing
-        }}
-      >
-        {/* Logo - Moves more to the left */}
-        <div
-          style={{
-            fontSize: '20px',
-            fontWeight: 'bold',
-            color: '#f0b634',
-            marginLeft: '-20px', // Moves Dario more left
-          }}
-        >
-          Dario
-        </div>
+    <header className="navbar">
+      <nav className="nav-container">
+        <div className="logo">Dario</div>
 
-        {/* Navigation - Moves more to the right */}
-        <div
-          style={{
-            display: 'flex',
-            gap: '15px',
-            marginRight: '-10px', // Moves navigation buttons more right
-          }}
-        >
-          {['Home', 'About Me', 'Experience', 'Projects', 'Contact Me'].map((item) => {
-            const id = item.replace(/\s+/g, '').toLowerCase();
-            return (
-              <button
-                key={id}
-                onClick={() => handleNavigation(id)}
-                style={{
-                  background: 'none',
-                  border: 'none',
-                  color: activeSection === id ? '#ffffff' : '#f0b634',
-                  fontSize: '14px',
-                  whiteSpace: 'nowrap',
-                  cursor: 'pointer',
-                  transition: 'color 0.3s',
-                  padding: '5px 10px', // Slight padding for spacing
-                }}
-              >
-                {item}
-              </button>
-            );
-          })}
-        </div>
+        {/* Desktop Navigation */}
+        {!isMobile ? (
+          <div className="nav-links">
+            <a href="#home">Home</a>
+            <a href="#aboutme">About Me</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contactme">Contact Me</a>
+          </div>
+        ) : (
+          // Mobile Hamburger Menu
+          <button 
+            className={`hamburger ${menuOpen ? "open" : ""}`} 
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        )}
       </nav>
+
+      {/* Mobile Dropdown Navigation */}
+      {isMobile && (
+        <div className={`mobile-nav ${menuOpen ? "open" : ""}`}>
+          <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
+          <a href="#aboutme" onClick={() => setMenuOpen(false)}>About Me</a>
+          <a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a>
+          <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
+          <a href="#contactme" onClick={() => setMenuOpen(false)}>Contact Me</a>
+        </div>
+      )}
     </header>
   );
 };

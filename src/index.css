@@ -31,12 +31,153 @@ section#contactme h2 {
   margin-bottom: 20px;
 }
 
-/* Responsive Adjustment for Smaller Screens */
+/* Navbar Base Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #0c0c21;
+  z-index: 1000;
+  border-bottom: 4px solid #f0b634;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 3%;
+}
+
+/* Logo */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f0b634;
+}
+
+/* Desktop Navigation */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f0b634;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+/* Hide Hamburger Menu on Desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #f0b634;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Open State for Hamburger Menu */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Navigation Menu */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  width: 80%;
+  max-width: 250px;
+  background-color: rgba(12, 12, 33, 0.95);
+  text-align: center;
+  padding: 12px 0;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* When Menu is Open */
+.mobile-nav.open {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Mobile Navigation Links */
+.mobile-nav a {
+  font-size: 1.2rem;
+  padding: 12px;
+  color: #f0b634;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.mobile-nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+/* Responsive Fix */
 @media (max-width: 768px) {
-  section h2 {
-    font-size: 2.5rem;
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
   }
 }
+
+
+@media (max-width: 768px) {
+  #about-me-gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns instead of 3 */
+  }
+
+  .about-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
 
 /* Typing Animation */
 .typing-container {

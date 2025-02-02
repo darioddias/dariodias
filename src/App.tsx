@@ -20,12 +20,12 @@ const App = () => {
   useEffect(() => {
     // Fetch GitHub repository language stats
     fetch("https://api.github.com/repos/darioddias/dariodias/languages")
-      .then((response) => response.json())
-      .then((data) => {
-        setLanguages(data);
-        setTotalBytes(Object.values(data).reduce((a, b) => a + b, 0));
-      })
-      .catch((error) => console.error("Error fetching languages:", error));
+  .then((response) => response.json())
+  .then((data: { [key: string]: number }) => { // Explicitly define the type
+    setLanguages(data);
+    setTotalBytes(Object.values(data).reduce((a, b) => a + b, 0)); // TypeScript now knows it's numbers
+  })
+  .catch((error) => console.error("Error fetching languages:", error));
   
     // Typing Animation
     const typingElements = document.querySelectorAll('.typing');

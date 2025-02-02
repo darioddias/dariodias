@@ -134,6 +134,7 @@ section#contactme h2 {
 .about-image:nth-child(1) {
   grid-column: 1;
   grid-row-end: span 3;
+  transform: translateY(40px);
 }
 
 .about-image:nth-child(2) {
@@ -150,6 +151,7 @@ section#contactme h2 {
   grid-column: 3;
   grid-row-start: 1;
   grid-row-end: span 1;
+  transform: translateY(40px);
 }
 
 .about-image:nth-child(6) {

@@ -16,6 +16,7 @@ const Header = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+
   return (
     <header className="navbar">
       <nav className="nav-container">

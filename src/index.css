@@ -195,6 +195,18 @@ section#contactme h2 {
     padding: 0;
   }
   
+
+  @media (min-width: 1200px) {
+    #aboutme {
+      max-width: 1000px;
+    }
+  
+    #about-me-gallery {
+      max-width: 1000px;
+    }
+  }
+
+
   h2 {
     font-size: 1.4rem !important;
   }
@@ -286,13 +298,14 @@ section#contactme h2 {
   gap: 10px;
   margin-top: 30px;
   width: 90%;
-  max-width: 1200px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .about-image {
   width: 100%;
+  max-width: 300px;
   border-radius: 15px;
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(240, 182, 52, 0.3); /* Gold Yellow Glow */

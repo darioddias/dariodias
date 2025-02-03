@@ -55,9 +55,10 @@ section#experience h2,
 section#projects h2,
 section#contactme h2 {
   font-size: 3rem;
-  color: white; /* Updated from white */
+  color: white;
   text-align: center;
   margin-bottom: 20px;
+  max-width: 80%;
 }
 
 /* Navbar Base Styles */
@@ -199,10 +200,24 @@ section#contactme h2 {
   @media (min-width: 1200px) {
     #aboutme {
       max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    @media (min-width: 1200px) {
+      .experience-container {
+        max-width: 500px; 
+        margin: 0 auto;
+      }
     }
   
     #about-me-gallery {
-      max-width: 1000px;
+      width: 80%;
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
     }
   }
 
@@ -354,6 +369,7 @@ section#contactme h2 {
   gap: 20px;
   max-width: 800px;
   margin: 0 auto;
+
 }
 
 .experience-card {

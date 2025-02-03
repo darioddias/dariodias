@@ -104,13 +104,6 @@ const App = () => {
           <span style={{ color: '#f0b634' }}>Me</span>
         </h2>
         <p
-          style={{
-            maxWidth: '800px',
-            fontSize: '1.5rem',
-            lineHeight: '1.5',
-            margin: '20px auto',
-            color: 'white',
-          }}
         >
           Howdy! My name is Dario Dias and I'm a{' '}
           <b style={{ color: '#f0b634' }}>Dallas, TX</b> based computer science

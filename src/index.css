@@ -12,7 +12,7 @@ main {
 }
 
 section {
-  scroll-margin-top: 20px; /* Adjust based on navbar height */
+  scroll-margin-top: 60px; /* Adjust based on navbar height */
 }
 
 footer {

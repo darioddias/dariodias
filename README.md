@@ -10,7 +10,7 @@ I'm going to be updating it as I learn more cool things, but this is just the st
 
 ## Contact Me
 
-LinkedIn: www.linkedin.com/in/dario-dia
+LinkedIn: www.linkedin.com/in/dario-dias
 
 Email: dariokdias@gmail.com
 
